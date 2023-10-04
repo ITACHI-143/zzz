@@ -39,7 +39,7 @@ oks=[]
 cps=[]
 loop=0
 try:
-  proxylist= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+  proxylist= requests.get('https://raw.githubusercontent.com/Peaky-XD/proxy/main/socks4.txt').text
   open('socksku.txt','w').write(proxylist)
 except Exception as e:
   print(' server error')
