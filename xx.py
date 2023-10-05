@@ -1,6 +1,7 @@
 import os
 import time
 os.system('clear')
+os.system('rm -rf socksku.txt')
 os.system('git pull')
 from os import system as clr
 import random
